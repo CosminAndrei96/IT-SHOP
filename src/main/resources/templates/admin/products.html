@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-SHOP/Add-products</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/styleProd.css">
+<!--    <link rel="stylesheet" href="mediaAll600px.css">-->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function toggleFormAdd(){
+            $("#form-add").toggle();
+        }
+        function deleteResultMessage(){
+            $("#result-message").addClass("magictime puffOff");
+        }
+        function sendAndSaveProductRequest(){
+            var nameProduct=$("#nameProduct").val();
+            var categoryProduct=$("#categoryProduct").val();
+            var cost = $("#costProduct").val();
+            var quantity = $("#quantityProduct").val();
+            var imgSrc = $("#imgSrc").val();
+            var url = "http://localhost:8080/admin/products?name="+nameProduct+
+            "&category="+categoryProduct+"&cost="+cost+"&quantity="+quantity+"&imgSrc="+imgSrc;
+            $.post(url, function(data){
+                $("#result-message").html(data);
+                $("#result-message").removeClass("magictime puffOff");
+                $("#result-message").show();
+                setTimeout(deleteResultMessage, 2000);
+                $("#form-add").toggle();
+
+            }).done(function(response){
+                setTimeout(function(){
+                    location.reload();
+                }, 2000);
+            });
+        }
+
+        function deleteProduct(productId){
+        $.ajax({url:"/admin/products/"+productId,
+            type:"delete"});
+
+        //stergem din interfata
+
+        $("#"+productId).parent().parent().remove();
+        $("#result-message").html("Produsul a fost sters");
+        $("#result-message").removeClass("magictime puffOut");
+        $("#result-message").show();
+        setTimeout(deleteResultMessage, 2000);
+
+        }
+
+    </script>
+
+    <style>
+#cartPicture{
+width:25px;
+height:21px;
+}
+
+#brand{
+background-image: url("webSitePhotos/brand-logo.png");
+background-repeat: no-repeat;
+background-position:center;
+background-size: contain;
+min-height: 5vh;
+min-width: 5vw;
+padding: 4px;
+margin: 2px;
+margin-top:8px;
+
+}
+    </style>
+
+</head>
+
+<body class="white" id="bodyMain">
+
+    <div class="pageHeader">
+        <div class="main-navWhite" id="main-nav">
+            <li class="dropdown">
+                <a href="index.html">
+                    <div id="brand">
+
+                    </div>
+                </a>
+
+            <li class="dropdown">
+                <form action="index.html">
+                    <button type="submit" class="dropbtn">HOME</button>
+
+                </form>
+
+            </li>
+
+
+            <li class="dropdown">
+                <button class="dropbtn">COMPANY</button>
+                <div class="dropdown-content">
+                    <a href="despreNoi.html">About Us</a>
+                    <a href="#">Missions</a>
+                    <a href="#">Values</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Awards and Recognitions</a>
+                    <a href="#">Company's story</a>
+                    <a href="#">Cookies Policy</a>
+                </div>
+            </li>
+            <!-- <li class="dropdown">
+                <button class="dropbtn">ABOUT</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </li> -->
+
+            <li class="dropdown">
+                <button class="dropbtn">PRODUCTS</button>
+                <div class="dropdown-content">
+                    <a href="#">
+                        <div class="desktop"></div>
+                        Computers
+                    </a>
+                    <a href="#">All In One</a>
+                    <a href="#">Workstation</a>
+                    <a href="#">Displays</a>
+                    <a href="#">Printers</a>
+                    <a href="#">Components</a>
+                    <a href="#">Servers</a>
+                    <a href="#">Scanners</a>
+                    <a href="#">Projector</a>
+                </div>
+            </li>
+
+            <li class="dropdown">
+                <button class="dropbtn">CONTACT</button>
+                <div class="dropdown-content">
+                    <a href="#">Write Us</a>
+                    <a href="#">Locations</a>
+                    <a href="#">Return form</a>
+                    <a href="#">Service form</a>
+                </div>
+            </li>
+
+            <li><input type="search" id="inputSearch" placeholder="Search"><input type="submit" id="submitSearch" href="/search"
+                                                                                  value="Search"></li>
+            <!-- <li><input type="submit" href="/search" value="Search"></li> -->
+
+            <li class="dropdown">
+                <button class="dropbtn">
+                    <img src="webSitePhotos/account-icon.png" style="height: 20px; width: 20px">
+                </button>
+                <div id="dropdown-contentAccount" class="white" name="contentAccount">
+                    <div class="imgaccount">
+                        <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+                        <img src="webSitePhotos/account-icon2.jpg" alt="Avatar" class="avatar" id="avatar">
+                    </div>
+                    <form action="/login">
+                        <div class="accountContainer">
+                            <label for="exampleInputEmail1"><b>Email address</b></label>
+                            <input type="email" class="inputAccount" placeholder="Enter Username" name="email" required>
+
+                            <label for="exampleInputPassword1"><b>Password</b></label>
+                            <input type="password" class="inputAccount" placeholder="Enter Password" name="password1" required>
+
+                            <button type="submit" class="inputAccount">Login</button>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+                    </form>
+
+                    <a href="register.html">Sign up</a>
+                    <a href="#">Forgot password</a>
+                    <a href="/logout">Log out</a>
+
+                    </form>
+                </div>
+            </li>
+
+            <!-- <li class="dropdown">
+                <button class="dropbtn">ACCOUNT</button>
+                <div class="dropdown-content">
+                    <a href="#">My Account</a>
+                    <a href="#">Log in</a>
+                    <a href="#">Sign up</a>
+                    <a href="#">Vouchers</a>
+                    <a href="#">Orders</a>
+                    <a href="#">My Wallet</a>
+                    <a href="#">My Cards</a>
+                    <a href="#">Service</a>
+                    <a href="#">Order tracking</a>
+                    <a href="#">Forgot password</a>
+                    <a href="/logout">Log out</a>
+
+                </div>
+            </li> -->
+
+            <li id="spanLI">
+                <form action="/cart">
+                    <input type="image" src="webSitePhotos/cart.png" id="cartPicture" style="width:25px, height:21px"/>
+                </form>
+                <div class="eveniment">
+                    <a href="/cart"><span th:text="${items}"></span></a>
+                </div>
+            </li>
+
+            <!-- <li><input type="submit" href="/logout" value="Log out"></li> -->
+            <li><input type="button" id="darkMode" value="Dark Mode" style="width: auto;"></li>
+        </div>
+    </div>
+
+
+    <div class="admin-products">
+        <h1 id="h1ap">Products administration</h1>
+    </div>
+
+    <!-- <div class="products-container">
+
+        <div class="alert alert-primary" role="alert" id="result-message" style="display: none">
+
+        </div>
+    </div> -->
+
+    <button type="button" class="btn-add-product" onclick="toggleFormAdd();"> Add Product</button>
+    <form id="form-add" style="display:none">
+        <div class="form-group">
+            <span class="details" for="nameProduct">Name</span>
+            <input type ="text" class="form-control" id="nameProduct" placeholder="Product name..">
+        </div>
+        <div class="form-group">
+            <span class="details" for="categoryProduct">Category</span>
+            <input type ="text" class="form-control" id="categoryProduct" placeholder="Product`s category..">
+        </div>
+        <div class="form-group">
+            <span class="details" for="costProduct">Cost</span>
+            <input type ="number" class="form-control" id="costProduct" placeholder="Product`s cost..">
+        </div>
+        <div class="form-group">
+            <span class="details" for="quantityProduct">Quantity</span>
+            <input type ="number" class="form-control" id="quantityProduct" placeholder="Product`s quantity..">
+        </div>
+        <div class="form-group">
+            <span class="details" for="imgSrc">Image Source</span>
+            <input type ="text" class="form-control" id="imgSrc" placeholder="Product`s source..">
+        </div>
+        <button type="button" class="btn-add-product" onclick="sendAndSaveProductRequest();">Salveaza</button>
+    </form>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product name</th>
+            <th>Category</th>
+            <th>Cost</th>
+            <th>Quantity</th>
+            <th>Image</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="p:${products}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.category}"></td>
+            <td th:text="${p.cost}"></td>
+            <td th:text="${p.quantity}"></td>
+            <td>
+                <img th:src="@{${p.imgSrc}}" height="70px";  width="70px">
+            </td>
+            <td>
+                <!-- <button type="submit" th:id="${p.id}" onclick="deleteProduct(this.id);"
+                        class="btn-delete">Stergere</button> -->
+                <img src="/photo/trash.png" class="btn-delete" th:id="${p.id}" onclick="deleteProduct(this.id);">
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>

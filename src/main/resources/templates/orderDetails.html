@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT-SHOP</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/dashboard.css">
+  <link rel="stylesheet" href="style/styleProd.css">
+  <link rel="stylesheet" href="style/mediaAll600px.css">
+
+  <style>
+#cartPicture{
+width:25px;
+height:21px;
+}
+
+#brand{
+background-image: url("webSitePhotos/brand-logo.png");
+background-repeat: no-repeat;
+background-position:center;
+background-size: contain;
+min-height: 5vh;
+min-width: 5vw;
+padding: 4px;
+margin: 2px;
+margin-top:8px;
+
+}
+    </style>
+</head>
+
+<body class="white" id="bodyMain">
+<div class="pageHeader">
+  <div class="main-navWhite" id="main-nav">
+    <li class="dropdown">
+      <a href="index.html">
+        <div id="brand">
+
+        </div>
+      </a>
+
+    <li class="dropdown">
+      <form action="index.html">
+        <button type="submit" class="dropbtn">HOME</button>
+
+      </form>
+
+    </li>
+
+
+    <!-- <li class="dropdown">
+        <button class="dropbtn">COMPANY</button>
+        <div class="dropdown-content">
+            <a href="despreNoi.html">About Us</a>
+            <a href="#">Missions</a>
+            <a href="#">Values</a>
+            <a href="#">Privacy</a>
+            <a href="#">Awards and Recognitions</a>
+            <a href="#">Company's story</a>
+            <a href="#">Cookies Policy</a>
+        </div>
+    </li> -->
+    <!-- <li class="dropdown">
+        <button class="dropbtn">ABOUT</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </li> -->
+
+    <li class="dropdown">
+      <button class="dropbtn">PRODUCTS</button>
+      <div class="dropdown-content">
+        <!--                <a href="#">-->
+        <!--                    <div class="desktop"></div>-->
+        <!--                    Computers-->
+        <!--                </a>-->
+        <form action = "/category">
+          <input type = "submit" hiddden name = "category" value="Computers">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="WorkStation">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="AllinOne">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="Printers">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="Displays">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="SmartPhones">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="SmartWatch">
+        </form>
+
+        <form action = "/category">
+          <input type = "submit" name = "category" value="Earphones">
+        </form>
+
+
+        <!--                <a href="#">Workstation</a>-->
+        <!--                <a href="#">Displays</a>-->
+        <!--                <a href="#">PrintersTEST</a>-->
+        <!--                <a href="#">Components</a>-->
+        <!--                <a href="#">Servers</a>-->
+        <!--                <a href="#">Scanners</a>-->
+        <!--                <a href="#">Projector</a>-->
+      </div>
+    </li>
+<!--    <li class="dropdown">-->
+<!--      <button class="dropbtn">PRODUCTS</button>-->
+<!--      <div class="dropdown-content">-->
+<!--        <a href="#">-->
+<!--          <div class="desktop"></div>-->
+<!--          Computers-->
+<!--        </a>-->
+<!--        <a href="#">All In One</a>-->
+<!--        <a href="#">Workstation</a>-->
+<!--        <a href="#">Displays</a>-->
+<!--        <a href="#">Printers</a>-->
+<!--        <a href="#">Components</a>-->
+<!--        <a href="#">Servers</a>-->
+<!--        <a href="#">Scanners</a>-->
+<!--        <a href="#">Projector</a>-->
+<!--      </div>-->
+<!--    </li>-->
+
+    <li class="dropdown">
+      <button class="dropbtn">CONTACT</button>
+      <div class="dropdown-content">
+        <a href="#">Write Us</a>
+        <a href="#">Locations</a>
+        <a href="#">Return form</a>
+        <a href="#">Service form</a>
+      </div>
+    </li>
+
+    <li><input type="search" id="inputSearch" placeholder="Search"><input type="submit" id="submitSearch" href="/search"
+                                                                          value="Search"></li>
+    <!-- <li><input type="submit" href="/search" value="Search"></li> -->
+
+    <li class="dropdown">
+      <button class="dropbtn">
+        <img src="webSitePhotos/account-icon.png" style="height: 20px; width: 20px">
+      </button>
+      <div id="dropdown-contentAccount" class="white" name="contentAccount">
+        <div class="imgaccount">
+          <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+          <img src="webSitePhotos/account-icon2.jpg" alt="Avatar" class="avatar" id="avatar">
+        </div>
+        <form action="/login">
+          <div class="accountContainer">
+            <label for="exampleInputEmail1"><b>Email address</b></label>
+            <input type="email" class="inputAccount" placeholder="Enter Username" name="email" required>
+
+            <label for="exampleInputPassword1"><b>Password</b></label>
+            <input type="password" class="inputAccount" placeholder="Enter Password" name="password1" required>
+
+            <button type="submit" class="inputAccount">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        </form>
+
+        <a href="register.html">Sign up</a>
+        <a href="#">Forgot password</a>
+        <a href="/logout">Log out</a>
+
+        </form>
+      </div>
+    </li>
+
+    <!-- <li class="dropdown">
+        <button class="dropbtn">ACCOUNT</button>
+        <div class="dropdown-content">
+            <a href="#">My Account</a>
+            <a href="#">Log in</a>
+            <a href="#">Sign up</a>
+            <a href="#">Vouchers</a>
+            <a href="#">Orders</a>
+            <a href="#">My Wallet</a>
+            <a href="#">My Cards</a>
+            <a href="#">Service</a>
+            <a href="#">Order tracking</a>
+            <a href="#">Forgot password</a>
+            <a href="/logout">Log out</a>
+
+        </div>
+    </li> -->
+
+
+    <li id="spanLI">
+      <form action="/cart">
+        <input type="image" src="webSitePhotos/cart.png" id="cartPicture" style="width:25px; height:21px"/>
+      </form>
+
+      <div class="eveniment">
+        <a href="/cart"><span th:text="${items}"></span></a>
+      </div>
+
+    </li>
+
+
+    <li class="dropdown">
+      <form action="/history">
+        <button type="submit" class="dropbtn" >Order History</button>
+      </form>
+
+
+    </li>
+
+    <li class="dropdown">
+      <form action="/logout">
+        <button class="dropbtn">Log out</button>
+      </form>
+    </li>
+
+    <li><input type="button" id="darkMode" value="Dark Mode" style="width: auto;"></li>
+  </div>
+</div>
+
+<body>
+<h1 style="background:linear-gradient(135deg, #00bfff, orange);color:white;padding: 5px;">Order details:</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Product name</th>
+    <th>Quantity</th>
+    <th>Total cost</th>
+    <th>Price per unit</th>
+    <th>Category</th>
+    <th>Image</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr th:each="p:${orderLines}">
+    <td th:text="${p.productName}"></td>
+    <td th:text="${p.quantity}"></td>
+    <td th:text="${p.totalPrice}"></td>
+    <td th:text="${p.pricePerUnit}"></td>
+    <td th:text="${p.category}"></td>
+    <td>
+      <img th:src="@{${p.imgSrc}}" height="100px";  width="80px">
+    </td>
+
+  </tr>
+  </tbody>
+</table>
+
+<form action = "/dashboard">
+  <button type = "submit" class="btn-add-product" style="float:left;">Return to dashboard</button>
+</form>
+
+<form action = "/history">
+  <button type = "submit" class="btn-add-product" style="float:right;">Order History</button>
+
+</form>
+
+</body>
+</html>

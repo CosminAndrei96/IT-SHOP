@@ -1,0 +1,98 @@
+/* Site resizing according to screen size */
+
+@media all and (max-width: 600px) {
+  .pageStructure{
+    display: flex;
+    flex-direction:column;
+    position:relative;
+
+  }
+
+  #main-nav {
+    flex-direction: column;
+    text-align: center;
+    position:inherit;
+    }
+
+  .promotions{
+    margin-top: 500px;
+    background-color: lightblue;
+    border-color: blue;
+    border-width: 2px;
+    border-style:solid;
+    border-style: dashed;
+    padding: 20px;
+  }
+  
+  /* Style the pictures to center */
+    .center {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 60px;
+    }
+
+ .picture{
+    background-image: url("last_minute.jpg");
+    background-size: 300px 300px;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
+  .commands{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-color: lightblue;
+  }
+  
+  .commands a{
+    text-decoration: none;
+    padding: 8px 50px;
+  }
+  
+  .commands a:hover{
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color:coral;
+    color: black;
+  }
+  
+  .next {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  .section{
+  flex-direction: column;
+}
+
+.footer{
+  display: none;
+  flex-direction: column;
+}
+
+.Tfooter{
+  flex-direction: column;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+  

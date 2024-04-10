@@ -1,0 +1,134 @@
+/* Style for RegisterForm */
+#registrationForm{
+    border-style: solid;
+    width: 70%;
+    background: linear-gradient(135deg, #00bfff, orange);
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .registration{
+    margin: 40px;
+    border-style: solid;
+      max-width: 700px;
+      width:  100%;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 5px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  
+  .details{
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc 2px;
+    border-bottom-width: 2px;
+  }
+  
+  .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background:  #d9d9d9;
+    border: 5px solid transparent;
+  }
+  
+  #dot-1:checked~.category label .one,
+  #dot-2:checked~.category label .two,
+  #dot-3:checked~.category label .three{
+    background: #00bfff;
+    border-color: #d9d9d9;
+  }
+  
+  .buttonRegistration{
+    height: 45px;
+    margin: 35px;
+  }
+  
+  .buttonRegistration input{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    color:  #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(135deg, orange, #00bfff);
+  }
+  
+  input[type="radio"]{
+    display: none;
+  }
+  
+  .registration .title::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 35px;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    background: linear-gradient(135deg , #00bfff, orange);
+  }
+  
+  .registration form .user-details{
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: space-between;
+    margin: 20px 20px 12px 0;
+  }
+  
+  form .category{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 14px 0;
+  }
+  
+  form .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mediaAll600px.css">
+
+    <style>
+#cartPicture{
+width:25px;
+height:21px;
+}
+
+#brand{
+background-image: url("webSitePhotos/brand-logo.png");
+background-repeat: no-repeat;
+background-position:center;
+background-size: contain;
+min-height: 5vh;
+min-width: 5vw;
+padding: 4px;
+margin: 2px;
+margin-top:8px;
+
+}
+
+.navBar, .ads{
+background-image: url("/webSitePhotos/navbar-promotion.jpg");
+background-repeat: no-repeat;
+background-position:top;
+background-size: contain;
+min-height: 15vh;
+min-width: 15vw;
+padding: 2px;
+width: 15%;
+height: auto;
+}
+    </style>
+</head>
+
+<body class="white" id="bodyMain">
+<div class="pageHeader">
+    <div class="main-navWhite" id="main-nav">
+        <li class="dropdown">
+            <a href="index.html">
+                <div id="brand">
+
+                </div>
+            </a>
+
+        <li class="dropdown">
+            <form action="index.html">
+                <button type="submit" class="dropbtn">HOME</button>
+
+            </form>
+
+        </li>
+
+
+        <li class="dropdown">
+            <button class="dropbtn">COMPANY</button>
+            <div class="dropdown-content">
+                <a href="despreNoi.html">About Us</a>
+                <a href="#">Missions</a>
+                <a href="#">Values</a>
+                <a href="#">Privacy</a>
+                <a href="#">Awards and Recognitions</a>
+                <a href="#">Company's story</a>
+                <a href="#">Cookies Policy</a>
+            </div>
+        </li>
+        <!-- <li class="dropdown">
+            <button class="dropbtn">ABOUT</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </li> -->
+
+        <li class="dropdown">
+            <button class="dropbtn">PRODUCTS</button>
+            <div class="dropdown-content">
+                <a href="#">
+                    <div class="desktop"></div>
+                    Computers
+                </a>
+                <a href="#">All In One</a>
+                <a href="#">Workstation</a>
+                <a href="#">Displays</a>
+                <a href="#">Printers</a>
+                <a href="#">Components</a>
+                <a href="#">Servers</a>
+                <a href="#">Scanners</a>
+                <a href="#">Projector</a>
+            </div>
+        </li>
+
+        <li class="dropdown">
+            <button class="dropbtn">CONTACT</button>
+            <div class="dropdown-content">
+                <a href="#">Write Us</a>
+                <a href="#">Locations</a>
+                <a href="#">Return form</a>
+                <a href="#">Service form</a>
+            </div>
+        </li>
+
+        <li><input type="search" id="inputSearch" placeholder="Search"><input type="submit" id="submitSearch" href="/search"
+                                                                              value="Search"></li>
+        <!-- <li><input type="submit" href="/search" value="Search"></li> -->
+
+        <li class="dropdown">
+            <button class="dropbtn">
+                <img src="webSitePhotos/account-icon.png" style="height: 20px; width: 20px">
+            </button>
+            <div id="dropdown-contentAccount" class="white" name="contentAccount">
+                <div class="imgaccount">
+                    <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+                    <img src="webSitePhotos/account-icon2.jpg" alt="Avatar" class="avatar" id="avatar">
+                </div>
+
+                <div class="accountContainer">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" class="inputAccount" placeholder="Enter Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" class="inputAccount" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit" class="inputAccount">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <a href="register.html">Sign up</a>
+                <a href="#">Forgot password</a>
+                <a href="/logout">Log out</a>
+
+
+                </form>
+            </div>
+        </li>
+
+        <!-- <li class="dropdown">
+            <button class="dropbtn">ACCOUNT</button>
+            <div class="dropdown-content">
+                <a href="#">My Account</a>
+                <a href="#">Log in</a>
+                <a href="#">Sign up</a>
+                <a href="#">Vouchers</a>
+                <a href="#">Orders</a>
+                <a href="#">My Wallet</a>
+                <a href="#">My Cards</a>
+                <a href="#">Service</a>
+                <a href="#">Order tracking</a>
+                <a href="#">Forgot password</a>
+                <a href="/logout">Log out</a>
+
+            </div>
+        </li> -->
+
+        <li id="spanLI">
+            <form action="/cart">
+                <input type="image" src="webSitePhotos/cart.png" id="cartPicture" style="width:25px, height:21px"/>
+            </form>
+            <div class="eveniment">
+                <a href="/cart"><span th:text="${items}"></span></a>
+            </div>
+        </li>
+
+        <!-- <li><input type="submit" href="/logout" value="Log out"></li> -->
+        <li><input type="button" id="darkMode" value="Dark Mode" style="width: auto;"></li>
+    </div>
+</div>
+
+
+<div id="promotions">
+    <div id="hero">
+        <h1>Grăbește-te să prinzi oferta! Imprimantă bonus la orice sistem!</h1>
+
+    </div>
+    <div class="picture">
+        <!-- <img src="image1.jpg" class="center" id="mainImage2" alt="Promotion" style="width:auto;height: auto;"> -->
+        <div class="commands">
+            <a href="#" id="center" onclick="back()" class="previous">&laquo;</a>
+            <a href="#" id="center" onclick="next()" class="next">&raquo;</a>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="section">
+    <div class="navBar">
+
+    </div>
+
+    <div id="content">
+        <h1>About IT SHOP</h1>
+        <p>IT SHOP is an online store from BUCHAREST, with deliveries all over the country, founded in the
+            summer of 2008 and recognized in a short time as one of the most important online stores in Romania
+            due to the quality of services offered to customers and the awards obtained in the eCommerce
+            industry.</p>
+
+        <p>Our mission is to provide you with a new brand of online shopping that will be as fun as using the
+            mouse through your favorite malls, comfortably and safely.</p>
+
+        <p>For news you can read: twitter or facebook</p>
+
+
+
+
+
+        <p>Company information</p>
+        <p>Name: SC FANPLACE IT SRL</p>
+        <p>CIF: RO 31962960</p>
+        <p>RC: J39/380/2013</p>
+        <p>Registered office: Str. Oxygen, no. 1H, Caldararu Village, Cernica Commune, Ilfov County</p>
+        <p>Work point: Str. Oxigenului no 1H (sector 3) - Cernica, Ilfov.</p>
+        <p>IBAN: RO38 RNCB 0077 1636 4791 0001 - BCR</p>
+        <p>IBAN: RO85 BTRL RONC RT02 4735 8603 - Banca Transilvania</p>
+
+        <br>
+
+
+
+        <h1>The prizes won by IT SHOP</h1>
+        <h3>Shop of the year 2009</h3>
+        <p>IT SHOP was named the winner of the 2009 eCommerce Awards Gala and was named the shop of the year
+            2009. The eCommerce Awards Gala is an annual competition dedicated to the eCommerce industry. In
+            2009, GPeC was in its 4th edition organized by Andrei Radu - CEO of Link2eCommerce.</p>
+
+        <h3>Best Start-up Store 2008</h3>
+        <p>In the first year of its existence, IT SHOP won the title of the best start-up store at the eCommerce
+            Awards Gala. This award is given to the winner in the category of shops with less than a year of
+            experience.</p>
+
+        <h3>Second place for the best design in 2008</h3>
+        <p>IT SHOP won the 2nd place for the best design, awarded in the Ro Web Design Awards 2008 competition
+            organized by the Realitatea-Catavencu group.</p>
+
+    </div>
+
+    <div class="ads">
+
+    </div>
+
+</div>
+
+
+<div class="footer" id="footer">
+    <table class="Tfooter">
+        <tr>
+            <th>DESPRE NOI</th>
+            <th>ASISTENTA</th>
+            <th>CONT CLIENT</th>
+            <th>ABONEAZA-TE LA NEWSLETTER</th>
+        </tr>
+        <tr>
+            <td><a href="#">Despre noi</a></td>
+            <td><a href="#">Contacteaza-ne</a></td>
+            <td><a href="#">Contul meu</a></td>
+            <td>Vrei sa afli prin email despre reduceri si promotii? Aboneaza-te acum la newsletter si fii la
+                curent cu tot ce e nou!</td>
+        </tr>
+
+        <tr>
+            <td><a href="#">Termeni si conditii</a></td>
+            <td><a href="#">Intrebari frecvente</a></td>
+            <td><a href="#">Inregistrare</a></td>
+        </tr>
+
+        <tr>
+            <td><a href="#">Transport si retururi</a></td>
+            <td><a href="#">Harta site</a></td>
+            <td><a href="#">Recuperare parola</a></td>
+            <td><input type="email" id="email" name="email"><br></td>
+        </tr>
+
+        <tr>
+            <td><a href="#">Confidentialitate</a></td>
+            <td><a href="#">ANPC</a></td>
+            <td><a href="#">Istoric comenzi</a></td>
+        </tr>
+
+        <tr>
+            <td><a href="#">Marturiile clientilor</a></td>
+            <td><a href="#">Solutionarea Litigiilor</a></td>
+            <td><a href="#">Produse favorite</a></td>
+            <td><input type="submit" id="abonare" href="/aboneaza-te" value="Aboneaza-te"></td>
+        </tr>
+
+        <tr>
+            <td><a href="#">Politica de Cookies</a></td>
+            <td></td>
+            <td><a href="#">Formular retur</a></td>
+        </tr>
+
+        <tr>
+            <td><a href="https://www.euplatesc.ro/" target="_blank"><img
+                    src="https://c.cdnmp.net/v4/img/badges/euplatesc.v1684476720.png" alt="euplatesc"></a>
+            </td>
+            <td><a href="https://tbibank.ro/product/depozitul-online/?utm_source=google_ads&utm_medium=pmax&utm_campaign=deposits&gclid=CjwKCAjwkLCkBhA9EiwAka9QRp43eeYQooNfys8FpC85henBqINfzx9BjVMSxVxhqkZGyiganANUVhoCDfIQAvD_BwE"
+                   target="_blank"><img src="https://c.cdnmp.net/v4/img/badges/tbi.v1684476720.png"
+                                        alt="tbiBank"></a></td>
+            <td><a href="https://anpc.ro/ce-este-sal/" target="_blank"><img
+                    src="https://c.cdnmp.net/v4/img/badges/anpc_sal.v1684476720.png" alt="ANPC"></a></td>
+            <td><a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage"><img
+                    src="https://c.cdnmp.net/v4/img/badges/eu_sol.v1684476720.png" alt="Litigii"></a></td>
+            <td><a href="https://www.facebook.com/" target="_blank"><img src="webSitePhotos/FacebookLogo.png" alt="Facebook"
+                                                                         style="width: 40px;height: 40px;"></a></td>
+            <td><a href="https://www.instagram.com/" target="_blank"><img src="webSitePhotos/IgLogo.png" alt="Instagram"
+                                                                          style="width: 40px;height: 40px;"></a></td>
+        </tr>
+
+
+
+    </table>
+
+
+</div>
+<script src="scripts/script.js"></script>
+</body>
+
+</html>

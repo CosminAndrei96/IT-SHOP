@@ -1,0 +1,110 @@
+.admin-products{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: auto;
+    margin-top: 2px;
+    border: 1px solid powderblue;
+    background: linear-gradient(135deg, #00bfff, orange);
+
+}
+
+#h1ap{
+    color: white;
+    font-size: 200%;
+   }
+
+.products-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: auto;
+    background: linear-gradient(135deg, #00bfff, orange);
+}
+
+.btn-add-product{
+    background: linear-gradient(135deg, orange, #00bfff);
+    height: 45px;
+    margin: 35px;
+    border-radius: 5px;
+    color:  #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    width: auto;
+    outline: none;
+    font-size: 20px;
+    padding: 15px;
+    border: 3px solid white;
+    box-shadow:inset;
+    background:whitesmoke;
+
+}
+
+.details{
+    margin-bottom: 5px;
+    padding: 7px 0;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    width: 250px;
+    height: 10px;
+    background: lightblue;
+    border: 2px solid lightseagreen;
+    color: white;
+    background: linear-gradient(135deg, #00bfff, orange);
+  }
+
+.form-control{
+    display: block;
+    border: 2px solid powderblue;
+    background:linear-gradient(10deg, white, lightblue);;
+    height: 30px;
+    width: 500px;
+
+}
+
+
+table {
+    border-spacing: 1;
+    border-collapse:separate;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    /* position: relative; */
+}
+
+table td,table th {
+    padding-left: 8px;
+    text-align: center;
+}
+
+table thead tr {
+    height: 60px;
+    background: linear-gradient(135deg, orange, #00bfff);
+}
+
+tbody tr{
+    background: linear-gradient(10deg,orange,red );
+
+}
+
+tbody tr:hover {
+    color: orange;
+    background: red;
+    cursor: pointer
+}
+
+.btn-delete{
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
